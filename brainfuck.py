@@ -10,12 +10,12 @@ parantez_loc = []
 user_input = []
 
 for i, char in enumerate(brainfuck_code):
-        if char == "[":
-            parantez_loc.append(i)
-        elif char == "]":
-            start = parantez_loc.pop()
-            parantez[start] = i
-            parantez[i] = start
+    if char == "[":
+        parantez_loc.append(i)
+    elif char == "]":
+        start = parantez_loc.pop()
+        parantez[start] = i
+        parantez[i] = start
 
 temp_pointer = pointer
 while code_pointer < len(brainfuck_code):
